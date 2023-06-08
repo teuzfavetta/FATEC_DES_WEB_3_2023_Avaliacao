@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <br><br>
+    <h1>Cadastro de Presença</h1>
+    <form method="POST" action="{% url 'cadastro' %}">
+        {% csrf_token %}
+        <label for="id_nome">Nome completo do aluno:</label>
+        <input type="text" id="id_nome" name="nome" required><br>
+
+        <label for="id_professor">Nome do professor:</label>
+        <select id="id_professor" name="professor" required>
+            <option value="Professor 1">Orlando</option>
+            <option value="Professor 2">Nilton</option>
+            <option value="Professor 3">Thiago</option>
+        </select>
+        <br>
+
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br>
+    <button> <a href="lista">Lista de presença</a></button>
+    
+</body>
+</html>

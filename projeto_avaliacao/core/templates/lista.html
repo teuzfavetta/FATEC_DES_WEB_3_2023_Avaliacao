@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+        <h1>Lista de Presença</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Aluno:</th>
+                    <th>Nome do Professor:</th>
+                    <th>Data de Presença: </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Aluno in Alunos %}
+                    <tr>
+                        <td>{{ Aluno.nome_aluno }}</td>
+                        <td>{{ Professor.nome_professor }}</td>
+                        <td>{{ Modificado_em.modificado_em }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
+
+
+</body>
+</html>
